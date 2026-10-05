@@ -1,25 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Local biz demos (private)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Anes builds simple, fast, mobile-friendly websites for local businesses.">
+  <title>Websites by Anes</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; color: #1c1917; }
-    a { color: #0f766e; }
-    li { margin: 0.5rem 0; }
-    .note { color: #78716c; font-size: 0.9rem; }
+    :root {
+      --bg: #f4f1eb;
+      --ink: #1c1915;
+      --muted: #5e584e;
+      --rule: #d4cdc2;
+      color-scheme: light;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161410;
+        --ink: #f6f3ec;
+        --muted: #c8c0b4;
+        --rule: #3d3830;
+        color-scheme: dark;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding:
+        max(1.75rem, env(safe-area-inset-top))
+        max(1.25rem, env(safe-area-inset-right))
+        max(1.75rem, env(safe-area-inset-bottom))
+        max(1.25rem, env(safe-area-inset-left));
+    }
+
+    main {
+      width: min(100%, 36rem);
+    }
+
+    h1 {
+      margin: 0 0 1.25rem;
+      font-size: clamp(2.35rem, 10vw, 3.75rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+
+    h1::after {
+      content: "";
+      display: block;
+      width: 2.75rem;
+      height: 1px;
+      margin-top: 1.25rem;
+      background: var(--rule);
+    }
+
+    p {
+      margin: 0;
+      max-width: 38ch;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
-  <h1>Private demos</h1>
-  <p class="note">Preview only — not official shop websites.</p>
-  <ul>
-    <li><a href="./mikes-barber-shop/">Mike's The Barber Shop</a></li>
-    <li><a href="./champions-barbershop/">Champion's Barbershop</a></li>
-    <li><a href="./barbie-nails/">Barbie Nails</a></li>
-    <li><a href="./mikes-auto-repair/">Mike's Auto Repair</a></li>
-    <li><a href="./twin-city-boxing/">Twin City Boxing Club</a></li>
-  </ul>
+  <main>
+    <h1>Websites by Anes</h1>
+    <p>Anes builds simple, fast, mobile-friendly websites for local businesses — barbers, salons, auto shops, gyms, and restaurants.</p>
+  </main>
 </body>
 </html>
