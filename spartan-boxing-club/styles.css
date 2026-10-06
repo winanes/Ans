@@ -581,9 +581,7 @@ h3 { font-size: 1.15rem; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 768px) {
+  /* Hamburger earlier than 768 so long shop names don't overflow at ~820 */
   .menu-toggle { display: flex; }
   .nav {
     position: fixed;
@@ -619,6 +617,9 @@ h3 { font-size: 1.15rem; }
     border-bottom: none !important;
   }
   .nav-cta .btn { width: 100%; }
+}
+
+@media (max-width: 768px) {
   .hero { min-height: auto; padding: 3rem 0; }
   .hero-overlay {
     background: linear-gradient(
@@ -652,3 +653,5 @@ h3 { font-size: 1.15rem; }
   max-width: 100%;
 }
 iframe { max-width: 100%; }
+
+.contact-link span { overflow-wrap: anywhere; }
